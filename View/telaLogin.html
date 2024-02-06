@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../View/styles/style.css">
     <title>SenacHub</title>
-    
+
 </head>
+
 <body class="senachub_body_padrao">
     <header></header>
     <main class="senachub_borda_login">
@@ -23,7 +25,8 @@
                 <div class="senachub_email_senha">
                     <div class="senachub_input_email">
                         <label class="senachub_tamanho_email" for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Digite seu e-mail">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                 </div>
@@ -31,8 +34,10 @@
                 <!-- INPUT DE SENHA -->
                 <div class="senac_input_style">
                     <label class="senachub_tamanho_senha" for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" onkeypress="checkCapsLock(event)">
-                    <div id="capsLockMessage">Caps Lock está ativado!</div>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"
+                        onkeypress="checkCapsLock(event)">
+                    <div id="capsLockMessage" style="text-align: center;">Caps Lock está ativado!</div>
+
                 </div>
 
                 <!-- INPUT DE CHECK -->
@@ -50,7 +55,8 @@
 
                     <!-- BOTÃO DE NÃO TEM CONTA -->
                     <div class="espaco">
-                        <p class="senachub_nao_tem_conta">Não tem uma conta?<a class="senachub_crie_aqui" href="telaCadastro.html">&nbsp;Crie aqui</a></p>
+                        <p class="senachub_nao_tem_conta">Não tem uma conta?<a class="senachub_crie_aqui"
+                                href="telaCadastro.html">&nbsp;Crie aqui</a></p>
                     </div>
                 </div>
             </div>
@@ -58,13 +64,26 @@
     </main>
     <footer></footer>
 
-                      <!-- SCRIPTS -->
+    <!-- SCRIPTS -->
     <script>
         function checkCapsLock(event) {
             var capsLockMessage = document.getElementById('capsLockMessage');
             capsLockMessage.style.display = event.getModifierState('CapsLock') ? 'block' : 'none';
         }
+
+        document.addEventListener('keydown', function (event) {
+            var capsLockActive = event.getModifierState && event.getModifierState('CapsLock');
+            var capsLockMessage = document.getElementById('capsLockMessage');
+
+            if (capsLockActive) {
+                capsLockMessage.classList.add('active');
+            } else {
+                capsLockMessage.classList.remove('active');
+            }
+        });
+
     </script>
 
 </body>
+
 </html>

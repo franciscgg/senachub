@@ -53,7 +53,8 @@
             <div class="senachub_email_senha">
               <div class="form-group">
                 <label class="senachub_tamanho_email_cadastro" for="exampleInputPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" onkeypress="checkCapsLock(event)">
+                    <div class="text_capslock" id="capsLockMessage">Caps Lock está ativado!</div>
               </div>
             </div>
         </div>      
@@ -76,5 +77,25 @@
         </div>
     </main>
             <footer></footer>
+
+                                  <!-- SCRIPTS -->
+    <script>
+      function checkCapsLock(event) {
+          var capsLockMessage = document.getElementById('capsLockMessage');
+          capsLockMessage.style.display = event.getModifierState('CapsLock') ? 'block' : 'none';
+      }
+
+      document.addEventListener('keydown', function(event) {
+    var capsLockActive = event.getModifierState && event.getModifierState('CapsLock');
+    var capsLockMessage = document.getElementById('capsLockMessage');
+
+    if (capsLockActive) {
+        capsLockMessage.classList.add('active');
+    } else {
+        capsLockMessage.classList.remove('active'); 
+    }
+});
+
+    </script>
 </body>
 </html>

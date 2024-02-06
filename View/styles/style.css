@@ -7,9 +7,20 @@
 
 }
 
+
 #capsLockMessage {
     color: red;
     display: none;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+    margin-top: 0;
+}
+
+
+
+#capsLockMessage.active {
+    opacity: 1;
 }
 
 
@@ -107,9 +118,8 @@
     height: 38px;
     margin: 0 auto; 
     display: block; 
-    margin-top: 50px;
+    margin-top: 40px;
 }
-
 
                                                                                     /*PARTE DO LOGIN*/
 
