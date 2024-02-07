@@ -18,11 +18,13 @@
 }
 
 
-
 #capsLockMessage.active {
     opacity: 1;
 }
 
+#elemento-abaixo-do-capslock {
+    margin-bottom: -0px; /* Espaçamento personalizado */
+}
 
 
 .senachub_check_termos{
@@ -202,12 +204,14 @@
 }
 
 .senac_input_style{
+    margin-bottom: 15px;
     color: #E7E7E7;
     font-family: 'Manrope', sans-serif;
 }
 
 .senachub_check{
-    
+    margin-top: 8px;
+    margin-bottom: 8px;
     color: #E7E7E7;
     display: flex;
     font-weight: 400;
@@ -216,7 +220,6 @@
     padding-bottom: 8px;
     align-items: center;
     align-self: stretch;
-    
 }
 
 .senachub_esqueci_senha{
@@ -267,15 +270,7 @@
     text-decoration-line: underline;
 }
 
-.espaco_check{
-    display: flex;
-    padding-bottom: 15px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-}
-
-.espaco{
+.nao_tem_conta{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,5 +278,6 @@
     align-self: stretch;
     margin-top: 30px;
 }
+
 
 
