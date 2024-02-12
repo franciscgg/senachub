@@ -7,7 +7,6 @@
 
 }
 
-
 #capsLockMessage {
     color: red;
     display: none;
@@ -17,13 +16,22 @@
     margin-top: 0;
 }
 
-
 #capsLockMessage.active {
     opacity: 1;
 }
 
+#capsLockMessage1 {
+    color: red;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+#capsLockMessage1.active {
+    opacity: 1; 
+}
+
 #elemento-abaixo-do-capslock {
-    margin-bottom: -0px; /* Espaçamento personalizado */
+    margin-bottom: -0px; 
 }
 
 
@@ -36,7 +44,7 @@
     height: 38px;
     margin: 0 auto; 
     display: block; 
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 
@@ -51,14 +59,61 @@
     flex-shrink: 0;
 }
 
+                                                                                    /*ESQUECI SENHA*/
+.espaco-subtitulo {
+    margin-bottom: -60px; 
+}
+
+.input_redefinir_senha{
+    margin-bottom: -20px;
+}
+
+.btn_redefinir_senha{
+    margin-top: -20px;
+}
+
+
+.senachub_borda_esqueci_senha{
+    width: 412px;
+    height: 670px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 1px solid #FFF; 
+}
+
+.senachub_input_esqueci_senha{
+    color: #E7E7E7;
+    padding: 6px 12px;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Manrope', sans-serif;
+    width: 360px;
+    height: 38px;
+    margin: 0 auto; 
+    display: block; 
+    margin-top: 40px;
+}
+
+.text_capslock {
+    color: red;
+    text-align: center;
+}
+
 
                                                                                     /*PARTE DO CADASTRO*/
 
 .senachub_borda_cadastro{
+    border-radius: 25px;
     width: 412px;
     height: 701px;
     flex-shrink: 0;
     border: 1px solid #FFF;
+}
+
+.senachub_tamanho_email_cadastro{
+    display: flex;
+    margin-bottom: 10px;
 }
 
 
@@ -66,15 +121,6 @@
     content: " *";
     color: red; 
   }
-
-
-.espaco_botao{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-}
-
 
 
 .senachub_button_criar_conta{
@@ -134,11 +180,6 @@
     align-self: stretch;
 }
 
-.senachub_email_senha{
-    display: flex;
-    flex-direction: column;  
-    align-self: stretch;
-}
 
 .senachub_input_email{
     display: flex;
@@ -149,6 +190,7 @@
 }
 
 .senachub_borda_login{
+    border-radius: 25px;
     text-align: center;
     border: 1px solid #FFF;
     width: 412px;
@@ -222,8 +264,9 @@
     align-self: stretch;
 }
 
+
 .senachub_esqueci_senha{
-    margin-left: 105px;
+    margin-left: 75px;
     color: #E7E7E7; 
     text-decoration-line: underline;
 }
@@ -233,7 +276,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+   
 }
 
 .senachub_button_entrar{
@@ -250,8 +293,7 @@
     height: 38px;
 }
 
-.senachub_nao_tem_conta{
-    
+.senachub_nao_tem_conta{ 
     color: #284065;
     font-family: Manrope;
     font-size: 16px;
@@ -279,5 +321,12 @@
     margin-top: 30px;
 }
 
+.espaco_subtitulo_login{
+    margin-bottom: -30px;
+}
 
+.input_check_login{
+    margin-left: 15px;
+    margin-top: 60px;
+}
 

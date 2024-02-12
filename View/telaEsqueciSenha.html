@@ -3,14 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SenacHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/View/styles/style.css">
+    <title>SenacHub</title>
 </head>
-<body>
-    <header></header>
-    <main>
-        <h1>Esqueci a senha</h1>
-    </main>
-    <footer></footer>
+<body class="senachub_body_padrao">
+<header></header>
+<main class="senachub_borda_esqueci_senha">
+    <div class="senachub_container_cadastro">
+        <section class="senachub_header">
+            <img class="senachub_tamanho_logo" src="/Images/LogoSenac.png" alt="Logo SenacHub">
+            <h1 class="senachub_tamanho_titulo_login">Esqueci minha senha</h1>
+            <p class="senachub_tamanho_subtitulo">Redefina sua senha</p>
+            <div class="espaco-subtitulo"></div>
+
+            <!-- INPUT DE E-MAIL -->
+            <div class="senachub_input_esqueci_senha">
+                <label class="senachub_tamanho_email_cadastro" for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+
+            <!-- INPUT DE SENHA -->
+            <div class="senachub_input_esqueci_senha">
+                <label class="senachub_tamanho_email_cadastro" for="exampleInputPassword1">Nova Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua nova senha" onkeyup="checkCapsLock(event, 'capsLockMessageSenha1')">
+                <div class="text_capslock" id="capsLockMessageSenha1" style="display: none;">Caps Lock está ativado!</div>
+            </div>
+
+            <!-- INPUT DE CONFIRME A NOVA SENHA -->
+            <div class="senachub_input_esqueci_senha">
+                <label class="senachub_tamanho_email_cadastro" for="exampleInputPassword2">Confirme a Nova Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirme sua nova senha" onkeyup="checkCapsLock(event, 'capsLockMessageSenha2')">
+                <div class="text_capslock" id="capsLockMessageSenha2" style="display: none;">Caps Lock está ativado!</div>
+            </div>
+
+            <!-- INPUT DE CHECK -->
+            <div class="input_redefinir_senha"></div>
+            <div class="senachub_check_termos">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">&nbsp; Li e concordo com os termos
+                <label class="senachub_cor_lembrar_De_mim" for="exampleCheck1"></label>
+            </div>
+
+            <!-- BOTÃO REDEFINIR SENHA-->
+            <div class="btn_redefinir_senha"></div>
+            <button type="button" class="senachub_button_criar_conta">Redefinir senha</button>
+
+            <!-- BOTÃO JÁ TEM CONTA-->
+            <div class="nao_tem_conta">
+                <p class="senachub_nao_tem_conta">Já tem uma conta?<a class="senachub_crie_aqui" href="telaLogin.html">&nbsp;Entre aqui</a></p>
+            </div>
+        </section>
+    </div>
+</main>
+<footer></footer>
+
+<!-- SCRIPTS -->
+<script>
+    function checkCapsLock(event, messageID) {
+        var capsLockMessage = document.getElementById(messageID);
+        capsLockMessage.style.display = event.getModifierState('CapsLock') ? 'block' : 'none';
+    }
+</script>
 </body>
 </html>
