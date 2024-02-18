@@ -8,9 +8,136 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../View/styles/style.css">
     <title>SenacHub</title>
+    <style>
+        .telaPubli {
+            position: relative;
+        }
+
+        .telaPubli_main {
+            position: absolute;
+            top: 30%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            width: 1153px;
+            height: 394px;
+        }
+
+        .form-label {
+            width: 140px;
+        }
+
+        .form-control {
+            width: calc(90% - 10px);
+            margin-right: 125px;
+        }
+
+        .upload-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .upload-container label {
+            margin-right: 10px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 89%;
+            margin-top: 10px;
+        }
+
+        .btn-container button {
+            margin-left: 10px;
+            margin-bottom: 100px;
+        }
+
+      
+        .publicacao {
+            width: calc(90% - 10px); 
+            margin-right: 125px; 
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 16px;
+        }
+
+        .nome-usuario {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .mensagem {
+            margin-bottom: 10px;
+        }
+
+        .botoes-like-dislike {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 10px;
+        }
+
+        .botoes-like-dislike .btn-like {
+            margin-right: 20px; 
+        }
+
+        .botoes-like-dislike button {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 12px; 
+            width: 12px; 
+            height: 12px; 
+            outline: none !important; 
+            box-shadow: none !important; 
+            border-color: transparent !important; 
+        }
+
+        .contador-likes {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+
+        .btn-responder {
+            background-color: #284065;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .editar-perfil {
+            background-color: #284065;
+        }
+
+        .editar-perfil:hover {
+            background-color: #1e3045;
+        }
+
+        .btn-responder:hover {
+            background-color: #1e3045;
+        }
+        .publicacao {
+            width: calc(90% - 10px); 
+            margin-right: 125px; 
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 16px;
+            border-radius: 10px; 
+        }
+
+    </style>
 </head>
 
-<body>
+<body class="telaPubli">
+
+    <!-- CABEÇALHO -->
     <header class="cabecalho">
         <img class="tamanho_logo" src="/Images/LogoSenac.png" alt="Logo SenacHub">
 
@@ -30,7 +157,7 @@
         <div class="p-4">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="telaLogin.html">Home</a>
+                    <a class="nav-link" href="telaInicio.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="telaLogin.html">Amigos</a>
@@ -49,60 +176,108 @@
     </div>
     <!-- Fim do conteúdo do menu dropdown -->
 
-    <main>
-        <!-- MEU PERFIL -->
-
-        <div class="body_padrao_tela_publi">
-            <div
-                class="px-1 py-1 bg-black bg-opacity-10 border border--bottom1 border-black border-opacity-10 justify-content-end">
-                <div class="bg-white bg-opacity-10 col-11 justify-content-center d-flex">
-                    <p class="m-0 px-3 py-7 font-custom">Meu Perfil</p>
-                </div>
+    <!-- MEU PERFIL -->
+    <div class="body_padrao_tela_publi">
+        <div
+            class="px-1 py-1 bg-black bg-opacity-10 border border--bottom1 border-black border-opacity-10 justify-content-end">
+            <div class="bg-white bg-opacity-10 col-11 justify-content-center d-flex">
+                <p class="m-0 px-3 py-7 font-custom">Meu Perfil</p>
             </div>
+        </div>
 
-            <!-- FOTO DE PERFIL -->
-            
-            <div class="foto_perfil">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-9">
-                        <div class="rounded-1 d-flex justify-content-center">
-                            <img class="perfil_img" src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/13FD/production/_99171150_peppapigpa.jpg">
-                            <div class="square"></div>
-                        </div>
+        <!-- FOTO DE PERFIL -->
+        <div class="foto_perfil">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-9">
+                    <div class="rounded-1 d-flex justify-content-center">
+                        <img class="perfil_img"
+                            src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/13FD/production/_99171150_peppapigpa.jpg">
+                        <div class="square"></div>
                     </div>
                 </div>
             </div>
-            
-             <!-- INFORMAÇÕES PERFIL-->
-            <div class="info_perfil">
+        </div>
+
+        <!-- INFORMAÇÕES PERFIL-->
+        <div class="info_perfil">
             <h2 class="h2">Nome Sobrenome</h2>
             <p class="p">Curso</p>
             <p class="p2">Unidade de Ensino</p>
-            <button type="button" class="btn btn-primary">Editar Perfil</button>
+            <button type="button" class="btn btn-primary editar-perfil">Editar Perfil</button>
+        </div>
 
+        <!-- NÃO SEI OQ É ISSO AINDA -->
+        <div class="opcoes">
+            <ul>
+                <li>Senac EAD</li>
+                <li>Grupos</li>
+                <li>Eventos</li>
+                <li>Cursos</li>
+                <li>Bolsa de Estudo</li>
+                <li>Vagas</li>
+                <li>Atividades</li>
+                <li>Aulas</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Conteúdo do main -->
+    <main class="telaPubli_main">
+        <h5>Criar Publicação</h5>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mensagem:</label>
+            <textarea class="form-control" id="message" rows="7"></textarea>
+        </div>
+        <div class="upload-container mb-3">
+            <label for="upload" class="form-labell">Upload de Fotos:</label>
+            <input class="form-control" type="file" id="upload">
+        </div>
+        <div class="btn-container">
+            <button type="button" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" class="btn btn-primary editar-perfil">Publicar</button>
+        </div>
+
+
+        <!-- Conteúdo da publicação -->
+        <div class="publicacao">
+            <!-- Nome do usuário que fez a publicação -->
+            <div class="nome-usuario">Nome do Usuário</div>
+
+            <!-- Mensagem da publicação -->
+            <div class="mensagem">Mensagem da publicação</div>
+
+            <!-- Botões de like e dislike -->
+            <div class="botoes-like-dislike">
+                <button type="button" class="btn-like" onclick="aumentarLikes()"><i
+                        class="bi bi-hand-thumbs-up" style="font-size: 12px;"></i> <span class="contador-likes"
+                        id="likes">0</span></button>
+                <button type="button" class="btn-dislike" onclick="aumentarDislikes()"><i
+                        class="bi bi-hand-thumbs-down" style="font-size: 12px;"></i> <span class="contador-likes"
+                        id="dislikes">0</span></button>
             </div>
 
-            <!-- NÃO SEI OQ É ISSO AINDA -->
-            <div class="opcoes">
-                <ul>
-                    <li>Senac EAD</li>
-                    <li>Grupos</li>
-                    <li>Eventos</li>
-                    <li>Cursos</li>
-                    <li>Bolsa de Estudo</li>
-                    <li>Vagas</li>
-                    <li>Atividades</li>
-                    <li>Aulas</li>
-                </ul>
-            </div>
+            <!-- Botão para responder à publicação -->
+            <button type="button" class="btn-responder btn btn-primary">Responder</button>
         </div>
     </main>
-
-
     <footer></footer>
 
     <!-- Scripts do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        let likes = 0;
+        let dislikes = 0;
+
+        function aumentarLikes() {
+            likes++;
+            document.getElementById('likes').innerText = likes;
+        }
+
+        function aumentarDislikes() {
+            dislikes++;
+            document.getElementById('dislikes').innerText = dislikes;
+        }
+    </script>
 </body>
 </html>
