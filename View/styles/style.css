@@ -116,6 +116,11 @@
     margin-bottom: 10px;
 }
 
+.senachub_email_cadastro{
+    display: flex;
+    margin-bottom: 10px;
+}
+
 
 .senachub_tamanho_email_cadastro::after {
     content: " *";
